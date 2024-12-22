@@ -1,0 +1,6 @@
+FROM eclipse-temurin:21-jre-alpine
+
+WORKDIR /game
+RUN wget https://github.com/Swofty-Developments/HypixelSkyBlock/raw/refs/heads/master/configuration/NanoLimbo-1.7-all.jar
+
+CMD java -jar NanoLimbo-1.7-all.jar

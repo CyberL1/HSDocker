@@ -10,5 +10,27 @@ services:
     image: redis
   proxy:
     build: servers/proxy
+    volumes:
+      - ./servers/proxy/configuration/resources.json:/proxy/configuration/resources.json
     ports:
       - 25565:25565
+  limbo:
+    build:
+      context: servers/game
+      dockerfile: LimboDockerfile
+    volumes:
+      - ./servers/game/configuration/settings.yml:/game/configuration/settings.yml
+    ports:
+      - 65535:65535
+  island:
+    build:
+      context: servers/game
+      args:
+        SERVER_TYPE: ISLAND
+    volumes:
+      - ./servers/game/configuration/resources.json:/game/configuration/resources.json
+      - ./servers/game/configuration/collections:/game/configuration/collections
+      - ./servers/game/configuration/hypixel_island_template:/game/configuration/hypixel_island_template
+      - ./servers/game/configuration/hypixel_hub:/game/configuration/hypixel_hub
+    ports:
+      - 20000:20000

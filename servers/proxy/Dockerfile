@@ -8,9 +8,6 @@ RUN wget -O plugins/SkyBlockProxy.jar https://github.com/Swofty-Developments/Hyp
 RUN wget -O velocity.jar https://api.papermc.io/v2/projects/velocity/versions/3.3.0-SNAPSHOT/builds/400/downloads/velocity-3.3.0-SNAPSHOT-400.jar
 
 RUN wget https://raw.githubusercontent.com/Swofty-Developments/HypixelSkyBlock/refs/heads/master/configuration/velocity.toml
-RUN mkdir configuration
-
-RUN wget -O configuration/resources.json https://github.com/Swofty-Developments/HypixelSkyBlock/raw/refs/heads/master/configuration/resources.json
 RUN echo secret > forwarding.secret
 
 CMD java -jar velocity.jar

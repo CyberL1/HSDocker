@@ -1,0 +1,13 @@
+{
+  "mongodb": "mongodb://mongo:mongo@mongo",
+  "redis-uri": "redis://redis:6379",
+  "velocity-secret": "secret",
+  "limbo-port": "65535",
+  "pterodactyl-mode": false,
+  "spark": false,
+  "require-authentication": false,
+  "host-name": "172.17.0.1",
+  "transfer-timeout": "800",
+  "sandbox-mode": true,
+  "anticheat": true
+}
