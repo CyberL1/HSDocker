@@ -1,0 +1,10 @@
+name: HypixelSkyblock
+
+services:
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+  redis:
+    image: redis
