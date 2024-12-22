@@ -8,3 +8,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: mongo
   redis:
     image: redis
+  proxy:
+    build: servers/proxy
+    ports:
+      - 25565:25565
