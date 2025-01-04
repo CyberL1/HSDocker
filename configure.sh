@@ -13,4 +13,10 @@ mv HypixelSkyBlock-master/configuration/collections ../servers/game/configuratio
 mv HypixelSkyBlock-master/configuration/items ../servers/game/configuration
 
 cd ..
+
+# Rename collections to lowercase
+for i in $(ls servers/game/configuration/collections); do
+  mv -i servers/game/configuration/collections/$i `echo servers/game/configuration/collections/$i | tr 'A-Z' 'a-z'`;
+done
+
 rm -rf tmp
