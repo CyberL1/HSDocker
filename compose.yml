@@ -21,7 +21,7 @@ services:
       context: servers/game
       dockerfile: LimboDockerfile
     volumes:
-      - ./servers/game/configuration:/game/configuration
+      - ./servers/game/settings.yml:/game/settings.yml
     ports:
       - 65535:65535
   island:
