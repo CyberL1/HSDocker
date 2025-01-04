@@ -5,3 +5,12 @@
 2. Run `./configure.sh` to download server configs
 3. Start the server using `sudo docker compose up`
 4. Restart the server and enjoy!
+
+## How do I make myself admin?
+
+1. Join and disconnect to create a profile (if you don't have a profile already)
+2. Run this command:
+
+```sh
+./setrank.sh <your_ign> ADMIN
+```
