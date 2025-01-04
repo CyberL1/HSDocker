@@ -42,7 +42,7 @@ services:
       - ./servers/game/configuration:/game/configuration
     ports:
       - 20001:20001
-  farming_inslands:
+  farming_islands:
     build:
       context: servers/game
       args:
