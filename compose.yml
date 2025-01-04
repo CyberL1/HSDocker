@@ -42,6 +42,8 @@ services:
       - ./servers/game/configuration:/game/configuration
     ports:
       - 20001:20001
+    depends_on:
+      - island
   farming_islands:
     build:
       context: servers/game
@@ -51,3 +53,5 @@ services:
       - ./servers/game/configuration:/game/configuration
     ports:
       - 20002:20002
+    depends_on:
+      - hub
