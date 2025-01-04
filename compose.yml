@@ -33,3 +33,21 @@ services:
       - ./servers/game/configuration:/game/configuration
     ports:
       - 20000:20000
+  hub:
+    build:
+      context: servers/game
+      args:
+        SERVER_TYPE: HUB
+    volumes:
+      - ./servers/game/configuration:/game/configuration
+    ports:
+      - 20001:20001
+  farming_inslands:
+    build:
+      context: servers/game
+      args:
+        SERVER_TYPE: THE_FARMING_ISLANDS
+    volumes:
+      - ./servers/game/configuration:/game/configuration
+    ports:
+      - 20002:20002
